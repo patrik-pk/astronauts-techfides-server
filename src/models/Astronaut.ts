@@ -3,7 +3,7 @@ import { Schema, model } from 'mongoose'
 type Astronaut = {
   firstName: string
   lastName: string
-  birthDate: string
+  birthDate: number
   ability: string
 }
 
@@ -17,7 +17,7 @@ const AstronautSchema = new Schema<Astronaut>({
     required: true,
   },
   birthDate: {
-    type: String,
+    type: Number,
     required: true,
   },
   ability: {

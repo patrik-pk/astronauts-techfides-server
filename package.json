@@ -18,6 +18,7 @@
   "homepage": "https://github.com/patrik-pk/astronauts-techfides-server#readme",
   "dependencies": {
     "config": "^3.3.8",
+    "cors": "^2.8.5",
     "express": "^4.18.2",
     "express-validator": "^6.14.2",
     "mongoose": "^6.7.2",

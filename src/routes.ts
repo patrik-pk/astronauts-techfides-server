@@ -13,13 +13,13 @@ const routes = (app: Express) => {
     [
       check('firstName', 'First name is required').not().isEmpty(),
       check('lastName', 'Last name is required').not().isEmpty(),
-      check('birthDate', 'Birthdate is not a valid date').isISO8601().toDate(),
+      check('birthDate', 'Birthdate as timestamp is required').isNumeric(),
       check('ability', 'Ability is required').not().isEmpty(),
     ],
     addAstronaut
   )
   app.put('/api/astronaut/:id', editAstronaut)
-  app.delete('/api/astronaut/:id', deleteAstronaut)
+  app.delete('/api/astronaut/:ids', deleteAstronaut)
 }
 
 export default routes
