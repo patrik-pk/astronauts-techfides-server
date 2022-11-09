@@ -1,11 +1,8 @@
 import mongoose from 'mongoose'
 
-const mongoURI =
-  'mongodb+srv://user1234:user1234@cluster0.kttfwlv.mongodb.net/?retryWrites=true&w=majority'
-
 const connectDb = async () => {
   try {
-    await mongoose.connect(mongoURI)
+    await mongoose.connect(process.env.MONGO_URI)
     console.log('MongoDB connected')
   } catch (err) {
     console.error(err)

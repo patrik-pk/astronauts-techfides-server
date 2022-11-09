@@ -4,5 +4,7 @@
     "module": "commonjs",                         
     "esModuleInterop": true, 
     "forceConsistentCasingInFileNames": true, 
+    "rootDir": "./src",
+    "outDir": "./dist"
   }
 }
