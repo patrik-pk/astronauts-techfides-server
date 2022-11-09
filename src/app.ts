@@ -1,5 +1,9 @@
-import express, { Request, Response } from 'express'
+import express from 'express'
 import routes from './routes'
+
+import connectDb from './db'
+
+connectDb()
 
 const app = express()
 
@@ -7,6 +11,8 @@ app.use(express.json())
 
 routes(app)
 
-app.listen(5000, () => {
-    console.log('app listening')
+const PORT = process.env.PORT || 5000
+
+app.listen(PORT, () => {
+  console.log(`Server started on port: ${PORT}`)
 })

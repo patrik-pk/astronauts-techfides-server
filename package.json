@@ -17,7 +17,10 @@
   },
   "homepage": "https://github.com/patrik-pk/astronauts-techfides-server#readme",
   "dependencies": {
+    "config": "^3.3.8",
     "express": "^4.18.2",
+    "express-validator": "^6.14.2",
+    "mongoose": "^6.7.2",
     "typescript": "^4.8.4"
   },
   "devDependencies": {
